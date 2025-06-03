@@ -1,25 +1,20 @@
 /*~~~~~~~~~~~~~~~ TOGGLE BUTTON ~~~~~~~~~~~~~~~*/
-const navMenu = document.getElementById("nav-menu");
-const navLinks = document.querySelectorAll(".nav-link");
-const hamburger = document.getElementById("hamburger");
-const hamburgerIcon = hamburger.querySelector("i");
+const navMenu = document.getElementById("nav-menu")
+const navLink = document.querySelectorAll(".nav-link")
+const hamburger = document.getElementById("hamburger")
+
 
 hamburger.addEventListener("click", () => {
-  const isOpen = navMenu.classList.contains("left-[0]");
-  navMenu.classList.toggle("left-[0]");
-  navMenu.classList.toggle("left-[-100%]");
-  hamburgerIcon.classList.toggle("ri-menu-4-line");
-  hamburgerIcon.classList.toggle("ri-close-line");
-});
+    navMenu.classList.toggle("left-[0]")
+    hamburger.classList.toggle('ri-close-large-line')
+})
 
-navLinks.forEach(link => {
-  link.addEventListener("click", () => {
-    navMenu.classList.remove("left-[0]");
-    navMenu.classList.add("left-[-100%]");
-    hamburgerIcon.classList.remove("ri-close-line");
-    hamburgerIcon.classList.add("ri-menu-4-line");
-  });
-});
+navLink.forEach(link => {
+    link.addEventListener("click" , () => {
+        navMenu.classList.toggle("left-[0]")
+        hamburger.classList.toggle('ri-close-large-line')
+    })
+})
 
 /*~~~~~~~~~~~~~~~ SHOW SCROLL UP ~~~~~~~~~~~~~~~*/
 

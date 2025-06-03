@@ -6,7 +6,7 @@
 
 
 body {
-    @apply bg-green-950 text-white font-Poppins tracking-wider ;
+    @apply bg-green-50 text-white font-Poppins tracking-wider ;
 }
 
 section {
